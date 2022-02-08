@@ -8,6 +8,8 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 import styles from "./styles/app.css"
+import Header from "./layout/header";
+import Sidebar from "./layout/sidebar";
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }]
@@ -26,7 +28,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-white dark:bg-slate-700">
+        <Header />
+        <Sidebar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
